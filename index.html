@@ -1,1 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Interactif</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Plan Interactif</h1>
+    <div class="plan-container">
+        <img src="Image_2.png" alt="Plan" usemap="#planmap">
+        <map name="planmap">
+            <area shape="rect" coords="750,100,850,180" alt="Salle Réunion 1" onclick="showRoomInfo('Salle Réunion 1')">
+            <area shape="rect" coords="750,450,850,530" alt="Salle Réunion 2" onclick="showRoomInfo('Salle Réunion 2')">
+            <area shape="rect" coords="250,310,350,390" alt="Salle Réunion 3" onclick="showRoomInfo('Salle Réunion 3')">
+            <area shape="rect" coords="370,100,430,180" alt="WC 1" onclick="showRoomInfo('WC 1')">
+            <area shape="rect" coords="570,450,630,530" alt="WC 2" onclick="showRoomInfo('WC 2')">
+            <area shape="rect" coords="430,310,470,390" alt="Ascenseur G" onclick="showRoomInfo('Ascenseur G')">
+            <area shape="rect" coords="530,310,570,390" alt="Ascenseur D" onclick="showRoomInfo('Ascenseur D')">
+            <area shape="rect" coords="620,240,680,320" alt="Local Info" onclick="showRoomInfo('Local Info')">
+            <area shape="rect" coords="470,380,530,460" alt="Réserve" onclick="showRoomInfo('Réserve')">
+        </map>
+    </div>
+    <div id="info-panel" class="info-panel"></div>
+    <script src="script.js"></script>
+</body>
+</html>
 
