@@ -36,21 +36,21 @@
 <img src="Image_2.jpg" usemap="#image-map">
 
 <map name="image-map">
-  <area shape="rect" coords="1038,902,1210,983" href="#modal1">
-  <area shape="rect" coords="1038,824,1210,898" href="#modal2">
-  <area shape="rect" coords="1034,746,1210,817" href="#modal3">
-  <area shape="rect" coords="1037,665,1210,743" href="#modal4">
-  <area shape="rect" coords="1210,658,1034,545" href="#modal5">
-  <area shape="rect" coords="1031,421,1207,538" href="#modal6">
-  <area shape="rect" coords="1027,343,1210,421" href="#modal7">
-  <area shape="poly" coords="1027,205,1111,212,1143,237,1143,339,1027,339" href="#modal8">
-  <area shape="poly" coords="1027,92,1169,95,1176,258,1147,258,1133,233,1118,209,1027,205" href="#modal9">
-  <area shape="poly" coords="1179,95,1296,103,1299,258,1179,255" href="#modal10">
-  <area shape="rect" coords="1303,103,1384,258" href="#modal11">
-  <area shape="poly" coords="1388,255,1420,255,1423,230,1501,226,1501,106,1388,110" href="#modal12">
-  <area shape="poly" coords="1508,258,1646,258,1649,113,1508,106" href="#modal13">
-  <area shape="rect" coords="1508,265,1649,339" href="#modal14">
-  <area shape="poly" coords="1504,345,1646,345,1646,426,1476,423,1473,373" href="#modal15">
+  <area shape="rect" coords="1038,902,1210,983" onclick="openModal('modal1')">
+  <area shape="rect" coords="1038,824,1210,898" onclick="openModal('modal2')">
+  <area shape="rect" coords="1034,746,1210,817" onclick="openModal('modal3')">
+  <area shape="rect" coords="1037,665,1210,743" onclick="openModal('modal4')">
+  <area shape="rect" coords="1210,658,1034,545" onclick="openModal('modal5')">
+  <area shape="rect" coords="1031,421,1207,538" onclick="openModal('modal6')">
+  <area shape="rect" coords="1027,343,1210,421" onclick="openModal('modal7')">
+  <area shape="poly" coords="1027,205,1111,212,1143,237,1143,339,1027,339" onclick="openModal('modal8')">
+  <area shape="poly" coords="1027,92,1169,95,1176,258,1147,258,1133,233,1118,209,1027,205" onclick="openModal('modal9')">
+  <area shape="poly" coords="1179,95,1296,103,1299,258,1179,255" onclick="openModal('modal10')">
+  <area shape="rect" coords="1303,103,1384,258" onclick="openModal('modal11')">
+  <area shape="poly" coords="1388,255,1420,255,1423,230,1501,226,1501,106,1388,110" onclick="openModal('modal12')">
+  <area shape="poly" coords="1508,258,1646,258,1649,113,1508,106" onclick="openModal('modal13')">
+  <area shape="rect" coords="1508,265,1649,339" onclick="openModal('modal14')">
+  <area shape="poly" coords="1504,345,1646,345,1646,426,1476,423,1473,373" onclick="openModal('modal15')">
 </map>
 
 <!-- Modals -->
@@ -71,18 +71,13 @@
 <div id="modal15" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal15')">&times;</span><h2>Salle 15</h2><p>Informations à venir pour la salle 15.</p></div></div>
 
 <script>
+  function openModal(id) {
+    document.getElementById(id).style.display = 'block';
+  }
+
   function closeModal(id) {
     document.getElementById(id).style.display = 'none';
   }
-
-  document.querySelectorAll('area').forEach(area => {
-    area.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelectorAll('.modal').forEach(m => m.style.display = 'none');
-      const id = this.getAttribute('href').substring(1);
-      document.getElementById(id).style.display = 'block';
-    });
-  });
 
   window.onclick = function(event) {
     if (event.target.classList.contains('modal')) {
