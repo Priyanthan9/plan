@@ -7,27 +7,6 @@
     body {
       font-family: Arial, sans-serif;
     }
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1;
-      left: 0; top: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0,0,0,0.5);
-    }
-    .modal-content {
-      background-color: #fff;
-      margin: 10% auto;
-      padding: 20px;
-      border: 1px solid #888;
-      width: 60%;
-    }
-    .close {
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-      cursor: pointer;
-    }
   </style>
 </head>
 <body>
@@ -36,55 +15,31 @@
 <img src="Image_2.jpg" usemap="#image-map">
 
 <map name="image-map">
-  <area shape="rect" coords="1038,902,1210,983" onclick="openModal('modal1')">
-  <area shape="rect" coords="1038,824,1210,898" onclick="openModal('modal2')">
-  <area shape="rect" coords="1034,746,1210,817" onclick="openModal('modal3')">
-  <area shape="rect" coords="1037,665,1210,743" onclick="openModal('modal4')">
-  <area shape="rect" coords="1210,658,1034,545" onclick="openModal('modal5')">
-  <area shape="rect" coords="1031,421,1207,538" onclick="openModal('modal6')">
-  <area shape="rect" coords="1027,343,1210,421" onclick="openModal('modal7')">
-  <area shape="poly" coords="1027,205,1111,212,1143,237,1143,339,1027,339" onclick="openModal('modal8')">
-  <area shape="poly" coords="1027,92,1169,95,1176,258,1147,258,1133,233,1118,209,1027,205" onclick="openModal('modal9')">
-  <area shape="poly" coords="1179,95,1296,103,1299,258,1179,255" onclick="openModal('modal10')">
-  <area shape="rect" coords="1303,103,1384,258" onclick="openModal('modal11')">
-  <area shape="poly" coords="1388,255,1420,255,1423,230,1501,226,1501,106,1388,110" onclick="openModal('modal12')">
-  <area shape="poly" coords="1508,258,1646,258,1649,113,1508,106" onclick="openModal('modal13')">
-  <area shape="rect" coords="1508,265,1649,339" onclick="openModal('modal14')">
-  <area shape="poly" coords="1504,345,1646,345,1646,426,1476,423,1473,373" onclick="openModal('modal15')">
+  <area shape="rect" coords="1038,902,1210,983" onclick="openWindow('Salle 1')">
+  <area shape="rect" coords="1038,824,1210,898" onclick="openWindow('Salle 2')">
+  <area shape="rect" coords="1034,746,1210,817" onclick="openWindow('Salle 3')">
+  <area shape="rect" coords="1037,665,1210,743" onclick="openWindow('Salle 4')">
+  <area shape="rect" coords="1210,658,1034,545" onclick="openWindow('Salle 5')">
+  <area shape="rect" coords="1031,421,1207,538" onclick="openWindow('Salle 6')">
+  <area shape="rect" coords="1027,343,1210,421" onclick="openWindow('Salle 7')">
+  <area shape="poly" coords="1027,205,1111,212,1143,237,1143,339,1027,339" onclick="openWindow('Salle 8')">
+  <area shape="poly" coords="1027,92,1169,95,1176,258,1147,258,1133,233,1118,209,1027,205" onclick="openWindow('Salle 9')">
+  <area shape="poly" coords="1179,95,1296,103,1299,258,1179,255" onclick="openWindow('Salle 10')">
+  <area shape="rect" coords="1303,103,1384,258" onclick="openWindow('Salle 11')">
+  <area shape="poly" coords="1388,255,1420,255,1423,230,1501,226,1501,106,1388,110" onclick="openWindow('Salle 12')">
+  <area shape="poly" coords="1508,258,1646,258,1649,113,1508,106" onclick="openWindow('Salle 13')">
+  <area shape="rect" coords="1508,265,1649,339" onclick="openWindow('Salle 14')">
+  <area shape="poly" coords="1504,345,1646,345,1646,426,1476,423,1473,373" onclick="openWindow('Salle 15')">
 </map>
 
-<!-- Modals -->
-<div id="modal1" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal1')">&times;</span><h2>Salle 1</h2><p>Informations à venir pour la salle 1.</p></div></div>
-<div id="modal2" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal2')">&times;</span><h2>Salle 2</h2><p>Informations à venir pour la salle 2.</p></div></div>
-<div id="modal3" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal3')">&times;</span><h2>Salle 3</h2><p>Informations à venir pour la salle 3.</p></div></div>
-<div id="modal4" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal4')">&times;</span><h2>Salle 4</h2><p>Informations à venir pour la salle 4.</p></div></div>
-<div id="modal5" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal5')">&times;</span><h2>Salle 5</h2><p>Informations à venir pour la salle 5.</p></div></div>
-<div id="modal6" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal6')">&times;</span><h2>Salle 6</h2><p>Informations à venir pour la salle 6.</p></div></div>
-<div id="modal7" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal7')">&times;</span><h2>Salle 7</h2><p>Informations à venir pour la salle 7.</p></div></div>
-<div id="modal8" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal8')">&times;</span><h2>Salle 8</h2><p>Informations à venir pour la salle 8.</p></div></div>
-<div id="modal9" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal9')">&times;</span><h2>Salle 9</h2><p>Informations à venir pour la salle 9.</p></div></div>
-<div id="modal10" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal10')">&times;</span><h2>Salle 10</h2><p>Informations à venir pour la salle 10.</p></div></div>
-<div id="modal11" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal11')">&times;</span><h2>Salle 11</h2><p>Informations à venir pour la salle 11.</p></div></div>
-<div id="modal12" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal12')">&times;</span><h2>Salle 12</h2><p>Informations à venir pour la salle 12.</p></div></div>
-<div id="modal13" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal13')">&times;</span><h2>Salle 13</h2><p>Informations à venir pour la salle 13.</p></div></div>
-<div id="modal14" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal14')">&times;</span><h2>Salle 14</h2><p>Informations à venir pour la salle 14.</p></div></div>
-<div id="modal15" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal15')">&times;</span><h2>Salle 15</h2><p>Informations à venir pour la salle 15.</p></div></div>
-
 <script>
-  function openModal(id) {
-    document.getElementById(id).style.display = 'block';
-  }
-
-  function closeModal(id) {
-    document.getElementById(id).style.display = 'none';
-  }
-
-  window.onclick = function(event) {
-    if (event.target.classList.contains('modal')) {
-      event.target.style.display = 'none';
-    }
+  function openWindow(salle) {
+    const newWindow = window.open('', '_blank', 'width=400,height=300');
+    newWindow.document.write(`<h1>${salle}</h1>`);
+    newWindow.document.write(`<p>Informations à venir pour ${salle}.</p>`);
   }
 </script>
 
 </body>
 </html>
+
