@@ -1,33 +1,17 @@
-<!DOCTYPE html>
+<!DOCTYPE html>Add commentMore actions
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Plan</title>
+  <title>Plan </title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      overflow: auto;
+      font-family: Arial, sans-serif;
     }
-
-    .plan-container {
-      width: 100%;
-      height: 100vh;
-      overflow: auto;
-    }
-
-    .plan {
-      transform: scale(0.7); /* dézoom à 70% */
-      transform-origin: top left;
-      display: block;
-    }
-
     .highlight {
       fill: rgba(255, 255, 0, 0.5);
       stroke: #000;
       stroke-width: 2;
     }
-
     .modal {
       display: none;
       position: fixed;
@@ -39,23 +23,18 @@
       padding: 20px;
       z-index: 10;
     }
-
     .overlay {
       display: none;
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       background: rgba(0,0,0,0.5);
       z-index: 5;
     }
-
     .modal:target,
     .modal:target + .overlay {
       display: block;
     }
-
     .close {
       float: right;
       text-decoration: none;
@@ -66,13 +45,8 @@
 </head>
 <body>
 
-<div class="plan-container">
-  <img src="Image_1.png" usemap="#image-map" class="plan">
-</div>
-
-
 <h1>Plan Interactif</h1>
-<img src="plan.png" usemap="#image-map" class="plan>
+<img src="plan.png" usemap="#image-map">
 
 <map name="image-map">
   <area shape="rect" coords="7420, 4257, 7662, 4365" href="#modal1">
